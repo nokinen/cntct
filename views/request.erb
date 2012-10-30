@@ -1,17 +1,19 @@
-<h1>Request a phone interview</h1>
-<p>Please fill in the following form to request a phone interview.</p>
-<form action="/request" method="post">
-  <label for="name">Name:</label><br>
-  <input type="text" name="name"><br>
-  <label for="email">Email address:</label><br>
-  <input type="text" name="email"><br>
-  <label for="phone">Phone number or skype contact:</label><br>
-  <input type="text" name="phone"><br>
-  <label for="time">Best time to call:</label><br>
-  <select name="time" class="text"><br>
-	  <option value="Morning">Morning</option>
-	  <option value="Afternoon">Afternoon</option>
-	  <option value="Evening">Evening</option>
-  </select><br>
-  <input type="submit" value="Send">
-</form>
+<%  @title = "Request · Phone Interview" %>
+
+<div class="container-fluid">
+	<form action="/submit" method="post" class="request-form">
+		<h1 class="page-header">Request</h1>
+		<p>Please fill in the following form to request a phone interview:</p>
+		<input type="text" name="name" placeholder="Name" class="input-block-level">
+		<input type="text" name="email" placeholder="Email" class="input-block-level">
+		<input type="text" name="phone" placeholder="Phone or Skype" class="input-block-level">
+		<select name="time" class="select-block-level">
+		 	<option value="">Choose preferred time…</option>
+		 	<option value="Morning">Morning</option>
+		  	<option value="Afternoon">Afternoon</option>
+		  	<option value="Evening">Evening</option>
+		</select>
+		<hr>
+		<input type="submit" class="btn btn-large btn-primary btn-block" value="Send">
+	</form>
+</div>

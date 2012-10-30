@@ -1,4 +1,4 @@
-require './request'
+require './contact'
 
 configure :production do 
   Pony.options = {
