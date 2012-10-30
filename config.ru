@@ -1,4 +1,4 @@
-require './endpoint'
+require './request'
 
 configure :production do 
   Pony.options = {
