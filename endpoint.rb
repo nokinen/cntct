@@ -3,7 +3,6 @@ require 'json'
 require 'pony'
 
 post '/submit' do
-    
     name = params[:name]
     email = params[:email]
     phone = params[:phone]
