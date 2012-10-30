@@ -1,18 +1,13 @@
 # Configuration
-## Add EMAIL_RECIPIENT to ENV
+## Setup recipient email address
 ### On Heroku
 	heroku config:add EMAIL_RECIPIENT=foo@bar.com
-### Locally
-1. Create a ```Procfile```:
-	
-		touch Procfile
-		echo "web: bundle exec rackup config.ru -p $PORT" > Procfile
-
-2. Create ```.env```:
+### On your local machine
+1. Create file ```.env``` and add variables:
 	
 		touch .env
 		echo "EMAIL_RECIPIENT=foo@bar.com" > .env
 		
-3. Run locally with foreman:
+2. Run with foreman:
 
 		foreman start
