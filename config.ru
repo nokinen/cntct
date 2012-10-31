@@ -1,5 +1,11 @@
 require './contact'
 
+configure do
+  Pony.options = {
+    to: ENV['EMAIL_RECIPIENT']
+  }
+end
+
 configure :production do 
   Pony.options = {
     via: :smtp,

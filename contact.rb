@@ -13,8 +13,8 @@ post '/submit' do
     time = params[:time]
     
     unless name.blank? or email.blank? or phone.blank? or time.blank? then
-      Pony.mail to: ENV['EMAIL_RECIPIENT'], from: email, subject: 'Phone Interview Request', 
-        body: "Please call me (#{phone}) in the #{time}." unless test?
+      msg = "Please call me at (#{phone}) in the #{time}."
+      Pony.mail from: email, subject: "Request", body: msg unless test?
     else
       return 400
     end

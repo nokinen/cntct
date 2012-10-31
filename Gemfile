@@ -1,4 +1,8 @@
 source 'http://rubygems.org'
 gem 'sinatra'
 gem 'pony'
-gem 'rack-test'
+
+group :development do
+  gem 'rack-test'
+  gem 'debugger'
+end
