@@ -1,11 +1,11 @@
 # encoding: UTF-8
-require "./contact"
+require "./cntct"
 require "test/unit"
 require "rack/test"
 
 set :environment, :test
 
-class ContactTest < Test::Unit::TestCase
+class CntctTest < Test::Unit::TestCase
   include Rack::Test::Methods
   
   def app

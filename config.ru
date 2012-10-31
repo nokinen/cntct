@@ -1,4 +1,4 @@
-require './contact'
+require './cntct'
 
 configure do
   Pony.options = {
