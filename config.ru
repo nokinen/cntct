@@ -1,6 +1,6 @@
 require './cntct'
 
-configure do
+configure :development do
   Pony.options = {
     to: ENV['EMAIL_RECIPIENT']
   }
@@ -8,6 +8,7 @@ end
 
 configure :production do 
   Pony.options = {
+    to: ENV['EMAIL_RECIPIENT'],
     via: :smtp,
     via_options: {
       address: 'smtp.sendgrid.net',

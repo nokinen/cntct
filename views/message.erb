@@ -1,0 +1,13 @@
+<script src="js/message.js"></script>
+<div id="message-alert-container"></div>
+<div class="form-container">
+	<form action="/message" method="post">
+		<h1 class="page-header">Send a Message</h1>
+		<p>Please fill in the following form to send a message:</p>
+		<input id="msg_email" type="text" name="email" placeholder="Email" class="input-block-level">
+		<input id="msg_subject" type="text" name="subject" placeholder="Subject" class="input-block-level">
+		<textarea id="msg_body" name="body" placeholder="Message" rows="3" class="input-block-level"></textarea>
+		<hr>
+		<input id="msg_btn" type="submit" class="btn btn-large btn-primary btn-block" value="Send">
+	</form>
+</div>
